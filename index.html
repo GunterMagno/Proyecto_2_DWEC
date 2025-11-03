@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>CRM con IndexedDB - Proyecto para alumnos</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 2em; }
+        input, button { padding: 0.5em; margin: 0.2em 0; width: 100%; }
+        input:focus { border-color: blue; outline: none; background: #e7f0ff; }
+        /* Implementar estilos para campos válidos e inválidos */
+        /* .valid { border-color: green; background: #e6ffe6; } */
+        /* .invalid { border-color: red; background: #ffe6e6; } */
+        button:disabled { background: #ccc; cursor: not-allowed; }
+        ul { list-style: none; padding: 0; }
+        li { padding: 0.5em; border-bottom: 1px solid #ccc; display: flex; justify-content: space-between; align-items: center; }
+        li span { flex-grow: 1; }
+        .actions button { margin-left: 0.5em; }
+    </style>
+</head>
+<body>
+
+<h1>CRM con IndexedDB - Proyecto para alumnos</h1>
+
+<form id="client-form" autocomplete="off">
+    <label>Nombre completo:</label>
+    <input id="name" name="name" type="text" placeholder="Nombre completo" required>
+    <!-- TODO: Añadir validación en evento 'onblur' usando expresiones regulares -->
+    
+    <label>Email:</label>
+    <input id="email" name="email" type="email" placeholder="ejemplo@dominio.com" required>
+    <!-- TODO: Añadir validación en evento 'onblur' usando expresiones regulares -->
+    
+    <label>Teléfono:</label>
+    <input id="phone" name="phone" type="text" placeholder="123-456-7890" required>
+    <!-- TODO: Añadir validación en evento 'onblur' usando expresiones regulares -->
+
+    <button id="add-btn" type="submit" disabled>
+        Agregar Cliente
+    </button>
+    <!-- TODO: Habilitar botón solo si todos los campos son válidos -->
+</form>
+
+<h2>Listado de Clientes</h2>
+<ul id="client-list">
+    <!-- TODO: Mostrar datos almacenados en IndexedDB dinámicamente -->
+</ul>
+
+<script src="js/crm-indexeddb.js"></script>
+
+</body>
+</html>
+
