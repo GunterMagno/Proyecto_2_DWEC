@@ -5,12 +5,12 @@
     <title>CRM con IndexedDB - Proyecto para alumnos</title>
     <style>
         body { font-family: Arial, sans-serif; margin: 2em; }
-        input, button { padding: 0.5em; margin: 0.2em 0; width: 100%; }
+        input, button { padding: 0.5em; margin: 0.2em 0; width: 100%; border: 2px solid #ccc; border-radius: 4px; }
         input:focus { border-color: blue; outline: none; background: #e7f0ff; }
-        /* Implementar estilos para campos válidos e inválidos */
-        /* .valid { border-color: green; background: #e6ffe6; } */
-        /* .invalid { border-color: red; background: #ffe6e6; } */
+        input.invalid { border-color: red; background: #ffe6e6; }
+        input.valid { border-color: green; background: #e6ffe6; }
         button:disabled { background: #ccc; cursor: not-allowed; }
+        button:not(:disabled) { background: #4CAF50; color: white; cursor: pointer; }
         ul { list-style: none; padding: 0; }
         li { padding: 0.5em; border-bottom: 1px solid #ccc; display: flex; justify-content: space-between; align-items: center; }
         li span { flex-grow: 1; }
